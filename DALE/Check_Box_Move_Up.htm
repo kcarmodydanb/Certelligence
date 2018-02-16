@@ -1,0 +1,33 @@
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+
+<script type="text/javascript">
+  /*use the below code for certelligence*/
+
+  $(function() {
+
+    $("#aaTermsAcceptContainer").insertBefore("#aaECShoppingCartButtonDIV")
+
+  });
+</script>
+
+
+<div id="aaECShoppingCartButtonDIV" class="t-ButtonRegion--noBorder">
+  <table summary="" cellspacing="0" cellpadding="0" border="0" width="100%">
+    <tbody>
+      <tr>
+        <td align="left"><button onclick="apex.submit('SUBMIT');" class="t-Button t-Button--hot   t-Button--large t-Button--simple" type="button" style="" id="aaECSubmitButton" disabled="disabled"><span class="t-Button-label">Submit</span></button><button onclick="apex.submit('PAY_BY_CHECK');"
+            class="t-Button t-Button--hot   t-Button--large t-Button--simple" type="button" style="display: none;" id="aaECPayByCheckButton"><span class="t-Button-label">Pay By Check</span></button><button onclick="apex.submit('PAY_BY_PURCHASE_ORDER');"
+            class="t-Button t-Button--hot   t-Button--large t-Button--simple" type="button" style="display: none;" id="aaECPurchaseOrderButton"><span class="t-Button-label">Pay By Purchase Order</span></button><button onclick="apex.submit('PAY_BY_WIRE_TRANSFER');"
+            class="t-Button t-Button--hot   t-Button--large t-Button--simple" type="button" style="display: none;" id="aaECWireTransferButton"><span class="t-Button-label">Pay By Wire Transfer</span></button><button onclick="apex.submit('CONFIRM_ORDER');"
+            class="t-Button t-Button--hot   t-Button--large t-Button--simple" type="button" style="display: none;" id="aaECConfirmOrderButton"><span class="t-Button-label">Confirm Order</span></button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div id="aaTermsAcceptContainer">
+  <input type="checkbox" id="aaTermsAccept">
+  <label for="aaTermsAccept">I accept the terms</label>
+</div>
