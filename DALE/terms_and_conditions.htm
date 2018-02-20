@@ -1,7 +1,17 @@
+<!--this will need to be inserted into the custom css maybe-->
+<style>
+  .termsContainer {
+    /*display: none;*/
+    padding: 20px;
+    border: 1px solid #ccc;
+
+  }
+</style>
+
 <div id="aaTermsAcceptContainer">
   <input type="checkbox" id="aaTermsAccept">
-  <label for="aaTermsAccept">I accept the terms</label><a onclick="showTerms()">	&#128712;</a>
-  <div id="maincontentarea_0_mainbody_0_TermsPanel" class="termsContainer" style="display:none; padding:20px;border:1px solid #ccc">
+  <label for="aaTermsAccept">I accept the terms</label><button class="accordion"></button>
+  <div id="maincontentarea_0_mainbody_0_TermsPanel" class="termsContainer">
 
 
     <p>Please carefully read these terms and conditions (the “<strong>Product Agreement</strong>”), the DALE Foundation Terms of Use (“<span><a href="/Terms-of-Use">Terms of Use</a></span>”) and the DALE Foundation Privacy Policy (the “<span><a href="/Privacy-Policy">Privacy Policy</a></span>”)
@@ -84,27 +94,37 @@
 
 <script>
   /*$(document).ready(function() {
-                            if ($('#aaTermsAccept').is(':checked')) {
-                              $('#aaECSubmitButton').removeAttr('disabled');
-                            } else {
-                              $('#aaECSubmitButton').attr('disabled', 'disabled');
-                            }
-                          } );
+                                                if ($('#aaTermsAccept').is(':checked')) {
+                                                  $('#aaECSubmitButton').removeAttr('disabled');
+                                                } else {
+                                                  $('#aaECSubmitButton').attr('disabled', 'disabled');
+                                                }
+                                              } );
 
-                          $('#aaTermsAcceptContainer').on('change', '#aaTermsAccept', function() {
-                            if ($('#aaTermsAccept').is(':checked')) {
-                              $('#aaECSubmitButton').removeAttr('disabled');
-                            } else {
-                              $('#aaECSubmitButton').attr('disabled', 'disabled');
-                            }*/
+                                              $('#aaTermsAcceptContainer').on('change', '#aaTermsAccept', function() {
+                                                if ($('#aaTermsAccept').is(':checked')) {
+                                                  $('#aaECSubmitButton').removeAttr('disabled');
+                                                } else {
+                                                  $('#aaECSubmitButton').attr('disabled', 'disabled');
+                                                }*/
 
-  function showTerms() {
-    var x = document.getElementById("maincontentarea_0_mainbody_0_TermsPanel");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
+  var acc = document.getElementsByClassName("termsContainer");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      /* Toggle between adding and removing the "active" class,
+      to highlight the button that controls the panel */
+      this.classList.toggle("active");
+
+      /* Toggle between hiding and showing the active panel */
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
   }
   /*});*/
 </script>
