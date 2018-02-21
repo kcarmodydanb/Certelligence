@@ -1,0 +1,22 @@
+<div id="aaTermsAcceptContainer">
+  <input type="checkbox" id="aaTermsAccept">
+  <label for="aaTermsAccept"><a href="f?p=ECSSA:15010:::NO:RP,15010:G_CART_ID,CUST_CONTEXT:,TERMS_CONDITIONS">I accept the terms</a></label>
+</div>
+
+<script>
+  $(document).ready(function() {
+    if ($('#aaTermsAccept').is(':checked')) {
+      $('#aaECSubmitButton').removeAttr('disabled');
+    } else {
+      $('#aaECSubmitButton').attr('disabled', 'disabled');
+    }
+  });
+
+  $('#aaTermsAcceptContainer').on('change', '#aaTermsAccept', function() {
+    if ($('#aaTermsAccept').is(':checked')) {
+      $('#aaECSubmitButton').removeAttr('disabled');
+    } else {
+      $('#aaECSubmitButton').attr('disabled', 'disabled');
+    }
+  });
+</script>
