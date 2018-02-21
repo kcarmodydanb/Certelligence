@@ -1,16 +1,64 @@
-<!--this will need to be inserted into the custom css maybe-->
-<style>
-  .termsContainer {
-    /*display: none;*/
-    padding: 20px;
-    border: 1px solid #ccc;
+<html>
 
+
+<style type="text/css">
+  /* Style the buttons that are used to open and close the accordion panel */
+
+  .termsContainer {
+    display: none;
   }
+
+  /*.accordion {
+    background-color: #inherit;
+    color: #444;
+    cursor: pointer;
+    padding: 1px;
+    text-align: center;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }*/
+
+  .accordion:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+)
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;*/
+  }
+
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
+  /*.active,
+  .accordion:hover {
+    background-color: #ccc;
+  }*/
+
+  .active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+  }
+
+  /* Style the accordion panel. Note: hidden by default */
+
+  /*.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+  }*/
 </style>
 
+<!--
+<button class="accordion">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum...</p>
+</div>
+-->
 <div id="aaTermsAcceptContainer">
   <input type="checkbox" id="aaTermsAccept">
-  <label for="aaTermsAccept">I accept the terms</label><button class="accordion"></button>
+  <label for="aaTermsAccept">I accept the terms</label><a class="accordion"></a>
   <div id="maincontentarea_0_mainbody_0_TermsPanel" class="termsContainer">
 
 
@@ -92,29 +140,39 @@
   </div>
 </div>
 
+<tbody>
+  <tr>
+    <td align="left"><button onclick="apex.submit('SUBMIT');" class="t-Button t-Button--hot   t-Button--large t-Button--simple" type="button" style="" id="aaECSubmitButton" disabled="disabled"><span class="t-Button-label">Submit</span></button><button onclick="apex.submit('PAY_BY_CHECK');"
+        class="t-Button t-Button--hot   t-Button--large t-Button--simple" type="button" style="display: none;" id="aaECPayByCheckButton"><span class="t-Button-label">Pay By Check</span></button><button onclick="apex.submit('PAY_BY_PURCHASE_ORDER');" class="t-Button t-Button--hot   t-Button--large t-Button--simple"
+        type="button" style="display: none;" id="aaECPurchaseOrderButton"><span class="t-Button-label">Pay By Purchase Order</span></button><button onclick="apex.submit('PAY_BY_WIRE_TRANSFER');" class="t-Button t-Button--hot   t-Button--large t-Button--simple"
+        type="button" style="display: none;" id="aaECWireTransferButton"><span class="t-Button-label">Pay By Wire Transfer</span></button><button onclick="apex.submit('CONFIRM_ORDER');" class="t-Button t-Button--hot   t-Button--large t-Button--simple" type="button"
+        style="display: none;" id="aaECConfirmOrderButton"><span class="t-Button-label">Confirm Order</span></button></td>
+  </tr>
+</tbody>
 <script>
-  /*$(document).ready(function() {
-                                                  if ($('#aaTermsAccept').is(':checked')) {
-                                                    $('#aaECSubmitButton').removeAttr('disabled');
-                                                  } else {
-                                                    $('#aaECSubmitButton').attr('disabled', 'disabled');
-                                                  }
-                                                } );
+  /*JQuery statement to make the submit button active*/
+  /*  $(document).ready(function() {
+          if ($('#aaTermsAccept').is(':checked')) {
+            $('#aaECSubmitButton').removeAttr('disabled');
+          } else {
+            $('#aaECSubmitButton').attr('disabled', 'disabled');
+          }
+        });
 
-                                                $('#aaTermsAcceptContainer').on('change', '#aaTermsAccept', function() {
-                                                  if ($('#aaTermsAccept').is(':checked')) {
-                                                    $('#aaECSubmitButton').removeAttr('disabled');
-                                                  } else {
-                                                    $('#aaECSubmitButton').attr('disabled', 'disabled');
-                                                  }*/
-
-  var acc = document.getElementsByClassName("termsContainer");
+        $('#aaTermsAcceptContainer').on('change', '#aaTermsAccept', function() {
+              if ($('#aaTermsAccept').is(':checked')) {
+                $('#aaECSubmitButton').removeAttr('disabled');
+              } else {
+                $('#aaECSubmitButton').attr('disabled', 'disabled');
+              }*/
+  /*JS statement to make the terms accordion*/
+  var acc = document.getElementsByClassName("accordion");
   var i;
 
   for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
       /* Toggle between adding and removing the "active" class,
-      to highlight the button that controls the panel */
+      to highlight the button that controls the panel*/
       this.classList.toggle("active");
 
       /* Toggle between hiding and showing the active panel */
@@ -126,5 +184,5 @@
       }
     });
   }
-  /*});*/
+  //});
 </script>
