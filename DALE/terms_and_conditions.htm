@@ -142,29 +142,25 @@
 
 <tbody>
   <tr>
-    <td align="left"><button onclick="apex.submit('SUBMIT');" class="t-Button t-Button--hot   t-Button--large t-Button--simple" type="button" style="" id="aaECSubmitButton" disabled="disabled"><span class="t-Button-label">Submit</span></button><button onclick="apex.submit('PAY_BY_CHECK');"
-        class="t-Button t-Button--hot   t-Button--large t-Button--simple" type="button" style="display: none;" id="aaECPayByCheckButton"><span class="t-Button-label">Pay By Check</span></button><button onclick="apex.submit('PAY_BY_PURCHASE_ORDER');" class="t-Button t-Button--hot   t-Button--large t-Button--simple"
-        type="button" style="display: none;" id="aaECPurchaseOrderButton"><span class="t-Button-label">Pay By Purchase Order</span></button><button onclick="apex.submit('PAY_BY_WIRE_TRANSFER');" class="t-Button t-Button--hot   t-Button--large t-Button--simple"
-        type="button" style="display: none;" id="aaECWireTransferButton"><span class="t-Button-label">Pay By Wire Transfer</span></button><button onclick="apex.submit('CONFIRM_ORDER');" class="t-Button t-Button--hot   t-Button--large t-Button--simple" type="button"
-        style="display: none;" id="aaECConfirmOrderButton"><span class="t-Button-label">Confirm Order</span></button></td>
-  </tr>
+    <td align="left"><button onclick="apex.submit('SUBMIT');" class="t-Button t-Button--hot   t-Button--large t-Button--simple" type="button" style="" id="aaECSubmitButton" disabled="disabled"><span class="t-Button-label">Submit</span></button>
 </tbody>
 <script>
   /*JQuery statement to make the submit button active*/
-  /*  $(document).ready(function() {
-          if ($('#aaTermsAccept').is(':checked')) {
-            $('#aaECSubmitButton').removeAttr('disabled');
-          } else {
-            $('#aaECSubmitButton').attr('disabled', 'disabled');
-          }
-        });
+  /*$(document).ready(function() {
+    if ($('#aaTermsAccept').is(':checked')) {
+      $('#aaECSubmitButton').removeAttr('disabled');
+    } else {
+      $('#aaECSubmitButton').attr('disabled', 'disabled');
+    }
+  });
 
-        $('#aaTermsAcceptContainer').on('change', '#aaTermsAccept', function() {
-              if ($('#aaTermsAccept').is(':checked')) {
-                $('#aaECSubmitButton').removeAttr('disabled');
-              } else {
-                $('#aaECSubmitButton').attr('disabled', 'disabled');
-              }*/
+  $('#aaTermsAcceptContainer').on('change', '#aaTermsAccept', function() {
+    if ($('#aaTermsAccept').is(':checked')) {
+      $('#aaECSubmitButton').removeAttr('disabled');
+    } else {
+      $('#aaECSubmitButton').attr('disabled', 'disabled');
+    }
+  });*/
   /*JS statement to make the terms accordion*/
   var acc = document.getElementsByClassName("accordion");
   var i;
