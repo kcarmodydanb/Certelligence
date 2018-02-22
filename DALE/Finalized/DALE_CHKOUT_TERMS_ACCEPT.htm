@@ -1,0 +1,46 @@
+</div>
+<div id="aaTermsAcceptContainer">
+  <input type="checkbox" id="aaTermsAccept">
+  <a class="accordion" style="cursor: pointer;">I accept the terms</a>
+</div>
+<script>
+  $(document).ready(function() {
+    if ($('#aaTermsAccept').is(':checked')) {
+      $('#aaECSubmitButton').removeAttr('disabled');
+    } else {
+      $('#aaECSubmitButton').attr('disabled', 'disabled');
+    }
+  });
+
+  $('#aaTermsAcceptContainer').on('change', '#aaTermsAccept', function() {
+    if ($('#aaTermsAccept').is(':checked')) {
+      $('#aaECSubmitButton').removeAttr('disabled');
+    } else {
+      $('#aaECSubmitButton').attr('disabled', 'disabled');
+    }
+  });
+  $(function() {
+
+
+
+    $("#aaTermsAcceptContainer").insertBefore("#aaECSubmitButton")
+
+  });
+
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+
+
+      var panel = document.getElementById("maincontentarea_0_mainbody_0_TermsPanel");
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+</script>
