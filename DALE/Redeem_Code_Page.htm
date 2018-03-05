@@ -1,0 +1,51 @@
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+
+<div class="t-Region t-Region--scrollBody" id="danbECRedeemVoucher" role="group" aria-labelledby="danbECRedeemVoucher_heading">
+  <div class="t-Region-header">
+    <div class="t-Region-headerItems t-Region-headerItems--title">
+      <h2 class="t-Region-title" id="danbECRedeemVoucher_heading">Redeem Course</h2>
+    </div>
+    <div class="t-Region-headerItems t-Region-headerItems--buttons"><span class="js-maximizeButtonContainer"></span></div>
+  </div>
+  <div class="t-Region-bodyWrap">
+    <div class="t-Region-buttons t-Region-buttons--top">
+      <div class="t-Region-buttons-left"></div>
+      <div class="t-Region-buttons-right"></div>
+    </div>
+    <div class="t-Region-body">
+      <input type="hidden" name="p_arg_names" value="13980281750762361"><input type="hidden" name="p_t26" id="P15160_PRODUCT_NM" value=""><input type="hidden" name="p_arg_checksums" value="13980281750762361_YDJ-kblWFIPKNyyOYk5vBBL26Qk">
+      <div class="t-Form-fieldContainer t-Form-fieldContainer--stacked   t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large" id="P15160_LICENSE_KEY_CONTAINER">
+        <div class="t-Form-labelContainer">
+          <label for="P15160_LICENSE_KEY" id="P15160_LICENSE_KEY_LABEL" class="t-Form-label">Enter License Key</label>
+        </div>
+        <div class="t-Form-inputContainer"><input type="hidden" name="p_arg_names" value="13980665417762378"><input type="text" id="P15160_LICENSE_KEY" name="p_t27" required="" aria-required="true" class="text_field" value="" size="90" maxlength="" onkeypress="return apex.submit({request:'P15160_LICENSE_KEY',submitIfEnter:event})"></div>
+      </div>
+      <table summary="" cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tbody>
+          <tr>
+            <td align="left"><button onclick="apex.submit('SUBMIT');" class="t-Button t-Button--hot  " type="button" id="danbECSubmitButton"><span class="t-Button-label">Submit Key</span></button></td>
+
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+    <div class="t-Region-buttons t-Region-buttons--bottom">
+      <div class="t-Region-buttons-left"></div>
+      <div class="t-Region-buttons-right"></div>
+    </div>
+  </div>
+</div>
+
+<td align="left"><button onclick="location.href='f?p=DANBSSA:15175:::::G_CUST_ID:';" class="t-Button t-Button--hot  " type="button" id="ssaCourseHub"><span class="t-Button-label">Go To Course Hub</span></button></td>
+
+<script>
+  $(function() {
+
+    $("#danbECSubmitButton").insertBefore("#ssaCourseHub")
+
+  });
+</script>
